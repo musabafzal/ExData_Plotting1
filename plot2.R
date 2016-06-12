@@ -1,0 +1,6 @@
+source("load.R")
+data<-loaddata()
+plot(data$Time, data$Global_active_power, type="n", ylab="Global Active Power (kilowatts)", xlab="")
+lines(data$Time, data$Global_active_power)
+dev.copy(png, "plot2.png")
+dev.off()
